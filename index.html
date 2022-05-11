@@ -10,13 +10,14 @@
 <body>
     <header>
         <div class="header">
-            <div>
-                <p>Gourmet au Catering</p>
+
+            <div class="upper-logo-title">
+                <a href="#upper-section" id="logo-title">Gourmet au Catering</a>
             </div>
            <div class="nav-bar">
-               <a href="#">About</a>
-               <a href="#">Menu</a>
-               <a href="#">Contact</a>
+               <a href="#about">About</a>
+               <a href="#menu">Menu</a>
+               <a href="#contact">Contact</a>
            </div>
         </div>
     </header>
@@ -29,29 +30,72 @@
         </section> 
 
         <section>
-            <div class="middle-section">
-                <div class="img-container">
+            <div class="middle-section" id="about">
+                <div id="upper-image" class="img-container">
                     <img src="./images/about-image.jpg" alt="image about catering" width="100%" style="opacity: 0.75;">
                 </div>
                 <div class="about-catering">
-                    <h1 id="about-header">About Catering</h1>
-                    <h4 style="text-align: center;">Traditional Since 1889</h4>
+                    <h1 class="main-header">About Catering</h1>
+                    <h4 id="about-subtitle" >Traditional Since 1889</h4>
                     <p class="about">The Catering was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur adipiscing elit consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute iruredolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.We only use <span id="highlighted">seasonal</span> ingredients.</p>
-                    <p class="about" style="opacity: 0.6;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p id="disabled" class="about" style="opacity: 0.6;">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
             </div> 
         </section>
 
         <section>
-            <div class="middle-section" style="border-top: 1px solid grey;">
+            <div id="menu" class="middle-section" style="border-top: 1px solid rgba(212, 212, 212, 0.589);">
                 <div class = "about-catering">
-                    <h1 style="text-align: center;">Our Menu</h1>
+                    <h1 class = 'main-header'>Our Menu</h1>
+                    <h2 class="dt">Bread Basket</h2>
+                    <p class="menu-desc">Assortment of fresh baked fruit breads and muffins 5.50</p >
+
+                    <h2 class="dt">Honey Almond Granola with Fruits</h2>
+                    <p class="menu-desc">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p >
+
+                    <h2 class="dt">Belgian Waffle</h2>
+                    <p class="menu-desc">Vanilla flavored batter with malted flour 7.50</p >
+
+                    <h2 class="dt">Scrambled eggs</h2>
+                    <p class="menu-desc">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p >
+
+                    <h2 class="dt">Blueberry Pancakes</h2>
+                    <p class="menu-desc">With syrup, butter and lots of berries 8.50</p >
                 </div>
                 <div class="img-container">
                     <img src="./images/menu-image.jpg" alt="image about catering" width="100%" style="opacity: 0.75;">
                 </div>
             </div>
         </section>
+
+        <article>
+            <div class="middle-section" id="contact" style="border-top: 1px solid rgba(212, 212, 212, 0.589);">
+                <h1 class="main-header" id="contact-header">Contact</h1>
+                <p class="contact-desc">We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste. Do not hesitate to contact us.</p>
+                <h2 id="contact-subhead">Catering Service, 42nd Living St, 43043 New York, NY</h2>
+                <p class="contact-desc">You can also contact us by phone 00553123-2323 or email catering@catering.com, or you can send us a message here:</p>
+                <form action="">
+                    <input type="text" name="name" id="name" placeholder="Name" required>
+                    <br>
+                    <input type="text" name="amount" id="amount" placeholder="How many people" required>
+                    <br>
+                    <input type="date" name="date" id="date" >
+                    <br>
+                    <script>
+                        document.getElementById("date").value = new Date().toISOString().substring(0, 10);
+                    </script>
+                    <input type="text" name="message" id="message" placeholder="Message \ Special requirements" required>
+                    <br>
+                    <input type="submit" name="SEND MESSAGE" value="SEND MESSAGE">
+                </form>
+            </div>
+        </article>
     </main>
+
+    <footer>
+        <div class="footer">
+            <p>Powered by <a href="#">w3.css</a></p>
+        </div>
+    </footer>
 </body>
 </html>

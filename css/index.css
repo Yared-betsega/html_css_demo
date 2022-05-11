@@ -4,37 +4,89 @@ body{
 .header {
     display: flex;
     justify-content: space-between;
-    box-shadow: 2px 2px 5px #b9b8b8;
-    position: sticky;
-    /* width: 100vw; */
-    top: 0;
-    left: 0;
-    padding: 3px;
-    padding-left: 2%;
-    padding-right: 3%;
+    box-shadow: 3px 3px 5px #b9b8b8;
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    padding-top: 5px;
+    padding-bottom: 8px; 
     background-color: white;
     
 }
 .nav-bar{
     display: flex;
+    justify-content: end;
+    width: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 20px;
+}
+.header a,#about-subtitle  {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22.5px;
+    letter-spacing: 4px;
+}
+.header a:hover {
+    background-color: rgb(211, 209, 209);
+    
+}
+.upper-logo-title{
+    margin-left: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.upper-section {
+    position: relative;
 }
 
+#positioned-on-image {
+    position: absolute;
+    bottom: 1px;
+    left: 20px;
+    z-index: 50;
+    font-size: 2.4em;
+    opacity: 0.6;
+    line-height: 22.5px;
+    letter-spacing: 4px;
+}
 .middle-section{
     display: flex;
     justify-content: space-between;
+    padding: 4%;
     padding-top: 6%;
     padding-bottom: 6%;
-    flex-grow: 1;
     width: 80%;
     margin: auto;
+    
 }
 .about-catering {
+    padding: 1%;
     display: flex;
     flex-direction: column;
     width: 48%;
 }
-#about-header{
+.main-header{
     text-align: center;
+    font-family: "Playfair Display";
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 54px;
+    color: rgb(0, 0, 0);
+    letter-spacing: 5px;
+}
+#about-subtitle {
+    text-align: center;
+    margin: 2px;
+    font-size: 18px;
 }
 .about{
     line-height: 1.5em;
@@ -45,14 +97,123 @@ body{
     background-color: rgb(228, 225, 225);
     padding: 5px;
 }
-#positioned-on-image {
-    position: absolute;
-    bottom: 1px;
-    z-index: 50;
-    font-size: 3em;
-    opacity: 0.5;
-}
+
 .img-container {
     padding: 5px;
     width: 48%;
+}
+.dt {
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 22.5px;
+    letter-spacing: 4px;
+}
+.menu-desc {
+    opacity: 0.6;
+    margin-top: 2px;
+    margin-bottom: 40px;
+}
+#contact {
+    flex-direction: column;
+}
+#contact-header {
+    text-align:start;
+    margin-top: 15px;
+}
+.contact-desc {
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 22.5px;
+}
+#contact-subhead {
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 27px;
+    color: rgb(96, 125, 139);
+}
+input[type = text], input[type = date] {
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+    height: 50px;
+    border-bottom: 1px solid rgb(204, 202, 202);
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: 15px;
+}
+input[type = submit] {
+    width: 150px;
+    margin: 25px;
+    margin-left: 0;
+    border: none;
+    height: 40px;
+    border-bottom: 1px solid rgb(204, 202, 202);
+    font-family: "Times New Roman", Georgia, serif;
+    font-size: 15px;
+
+}
+input[type = submit]:hover {
+    background-color: rgb(206, 202, 202);
+    cursor: pointer;
+
+}
+footer{
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 100px;
+}
+.footer {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+}
+
+.footer p, .footer a{
+    color: black;
+}
+
+@media screen and (max-width: 1200px){
+    .middle-section {
+        width: 92%;
+    }
+}
+
+@media screen and (max-width: 1000px){
+    #menu {
+        flex-direction: column;
+
+    }
+    .about-catering, .img-container{
+        width: 100%;
+        /* padding: 4%; */
+    }
+    #disabled {
+        display: none;
+    }
+}
+@media screen and (max-width: 600px) {
+    .nav-bar{
+        display: none;
+    }
+    .header{
+        height: 40px;
+    }
+    #about{
+        display: flex;
+        
+    }
+    #upper-image{
+        display: none;
+    }
+    #disabled {
+        display: block;
+    }
+
+    
 }

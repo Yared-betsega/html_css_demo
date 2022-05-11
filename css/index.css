@@ -1,0 +1,58 @@
+body{
+    margin: 0;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 2px 2px 5px #b9b8b8;
+    position: sticky;
+    /* width: 100vw; */
+    top: 0;
+    left: 0;
+    padding: 3px;
+    padding-left: 2%;
+    padding-right: 3%;
+    background-color: white;
+    
+}
+.nav-bar{
+    display: flex;
+}
+
+.middle-section{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    flex-grow: 1;
+    width: 80%;
+    margin: auto;
+}
+.about-catering {
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
+#about-header{
+    text-align: center;
+}
+.about{
+    line-height: 1.5em;
+    font-size: 1.1em;
+}
+
+#highlighted {
+    background-color: rgb(228, 225, 225);
+    padding: 5px;
+}
+#positioned-on-image {
+    position: absolute;
+    bottom: 1px;
+    z-index: 50;
+    font-size: 3em;
+    opacity: 0.5;
+}
+.img-container {
+    padding: 5px;
+    width: 48%;
+}
